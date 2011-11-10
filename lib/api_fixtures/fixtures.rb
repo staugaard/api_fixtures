@@ -1,3 +1,5 @@
+require 'pathname'
+
 module ApiFixtures
   class Fixtures
     FIXTURES = {
@@ -17,17 +19,17 @@ module ApiFixtures
       path.gsub(/\.\w+$/, '')
     end
 
-    def self.fixtures_folder
-      unless @fixtures_folder
+    def self.folder
+      unless @folder
         if defined?(Rails)
-          @fixtures_folder = (Rails.root + 'test/api_fixtures')
+          @folder = (Rails.root + 'test/api_fixtures')
         end
       end
-      @fixtures_folder
+      @folder
     end
 
-    def self.fixtures_folder=(folder)
-      @fixtures_folder = folder
+    def self.folder=(folder)
+      @folder = Pathname.new(folder)
     end
 
     def self.fixture(method, path, response = nil)
@@ -42,7 +44,7 @@ module ApiFixtures
           response[2] = [response[2]]
         end
       when nil
-        file_name = fixtures_folder + ('.' + path + '.json')
+        file_name = folder + ('.' + path + '.json')
         response = [200, {'Content-Type' => 'application/json; charset=utf-8'}, [File.read(file_name.to_s)]]
       end
 
