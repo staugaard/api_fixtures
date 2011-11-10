@@ -1,4 +1,5 @@
 require 'pathname'
+require 'active_support/json'
 
 module ApiFixtures
   class Fixtures

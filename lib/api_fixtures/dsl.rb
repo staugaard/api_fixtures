@@ -1,4 +1,5 @@
 require 'api_fixtures/fixtures'
+require 'active_support/core_ext/class/attribute'
 
 module ApiFixtures
   module DSL
