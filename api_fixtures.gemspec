@@ -18,5 +18,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'minitest'
 
-  s.add_runtime_dependency 'activesupport', '>= 2.3.9', '< 4'
+  s.add_runtime_dependency 'activesupport', '>= 2.3.9'
 end
