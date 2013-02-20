@@ -1,5 +1,7 @@
 # api_fixtures
 
+# Moved here: https://github.com/zendesk/api_fixtures
+
 An easy way to setup JSON API fixtures for your integration tests
 
 ## Copyright and license
