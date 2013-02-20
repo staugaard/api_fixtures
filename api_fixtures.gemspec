@@ -9,6 +9,7 @@ Gem::Specification.new do |s|
   s.email       = ['mick@staugaard.com']
   s.homepage    = ''
   s.summary     = 'An easy way to setup JSON API fixtures for your integration tests'
+  s.license     = 'Apache License Version 2.0'
 
   s.files         = Dir['lib/**/*']
   s.test_files    = Dir['test/**/*']
