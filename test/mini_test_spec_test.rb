@@ -15,7 +15,7 @@ class MiniTestSpecTest < MiniTest::Spec
 
       ApiFixtures::Fixtures::FIXTURES[:get].wont_be_empty
 
-      run_setup_hooks
+      setup
 
       ApiFixtures::Fixtures::FIXTURES[:get].must_be_empty
     end
@@ -34,7 +34,7 @@ class MiniTestSpecTest < MiniTest::Spec
 
         api.expect('GET', '/foo')
 
-        run_teardown_hooks
+        teardown
 
         @flunk_calls.must_equal 1
       end
